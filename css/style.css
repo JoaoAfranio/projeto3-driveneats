@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5e5;
+  font-family: Roboto;
+}
+
+.header {
+  height: 92px;
+  width: 100%;
+
+  background-color: #cf2b2b;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  color: #ffffff;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+h1 {
+  font-family: Righteous;
+}
+
+.header h1 {
+  font-size: 44px;
+}
+
+.header h2 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.content {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 0 20px;
+}
+
+.box-food {
+  margin-top: 30px;
+}
+
+.box-food h1 {
+  font-size: 26px;
+}
+
+.foods {
+  padding: 15px 0;
+  display: flex;
+
+  width: 390px;
+
+  overflow: auto;
+  overflow-x: scroll;
+}
+
+.radio:checked + label .food {
+  box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.15), inset 0px 0px 0px 5px #32b72f;
+}
+
+.radio:checked + label .food .icon-check {
+  display: inherit;
+}
+
+.icon-check {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  color: #32b72f;
+}
+
+.food {
+  height: 216px;
+  min-width: 172px;
+  border-radius: 9px;
+  background-color: #fafafa;
+  margin-right: 10px;
+
+  padding: 10px;
+
+  display: grid;
+  position: relative;
+  gap: 5px;
+
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+}
+
+.food img {
+  width: 100%;
+}
+
+.food .food-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.food .food-description {
+  font-size: 15px;
+  font-weight: 300;
+  color: #a6a6a6;
+}
+
+.food .food-price {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menu-bottom {
+  height: 92px;
+  width: 100%;
+
+  background-color: #ffffff;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.menu-bottom button {
+  height: 61px;
+  width: 364px;
+  border-radius: 50px;
+  background: #cbcbcb;
+
+  color: #fafafa;
+  font-size: 16px;
+
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: inherit;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffffe5;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 353px;
+  width: 377px;
+  border-radius: 9px;
+  background-color: #50d074;
+
+  padding: 20px 10px;
+}
+
+.modal-content .head {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fafafa;
+}
+
+.modal-content .confirm {
+  height: 52px;
+  width: 329px;
+  border-radius: 100px;
+  border: none;
+  background-color: #fafafa;
+
+  font-size: 18px;
+  font-weight: 700;
+  color: #50d074;
+}
+
+.modal-content .cancel {
+  height: 20px;
+  border: none;
+  background-color: #50d074;
+
+  font-size: 18px;
+  font-weight: 700;
+  color: #fafafa;
+}
+
+.products {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product p {
+  font-size: 22px;
+  color: #fafafa;
+}
+
+.product .total-price,
+.product .text-price {
+  font-weight: 700;
+}

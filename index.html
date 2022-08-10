@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DrivenEats</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>DrivenEats</h1>
+      <h2>Sua comida em 6 minutos</h2>
+    </div>
+    <div class="content">
+      <div class="box-food">
+        <h1>Primeiro, seu prato</h1>
+        <div class="foods">
+          <input id="frango" name="food" type="radio" class="radio hidden" />
+          <label for="frango">
+            <div class="food">
+              <img src="./assets/img/frango_yin_yang 1.png" />
+              <p class="food-name">Frango Yin Yang</p>
+              <p class="food-description">
+                Um pouco de batata, Um pouco de salada
+              </p>
+              <p class="food-price">R$ 14,90</p>
+
+              <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
+            </div>
+          </label>
+          <input id="frango2" name="food" type="radio" class="radio hidden" />
+          <label for="frango2">
+            <div class="food">
+              <img src="./assets/img/frango_yin_yang 1.png" />
+              <p class="food-name">Frango Barbecue</p>
+              <p class="food-description">
+                Um pouco de barbecue, Um pouco de frango
+              </p>
+              <p class="food-price">R$ 16,90</p>
+
+              <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
+            </div>
+          </label>
+          <input id="frango3" name="food" type="radio" class="radio hidden" />
+          <label for="frango3">
+            <div class="food">
+              <img src="./assets/img/frango_yin_yang 1.png" />
+              <p class="food-name">Frango ao Molho</p>
+              <p class="food-description">
+                Um pouco de molho, Um pouco de frango
+              </p>
+              <p class="food-price">R$ 12,40</p>
+
+              <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="box-food">
+        <h1>Agora, sua bebida</h1>
+        <div class="foods">
+          <input id="bebida" name="drink" type="radio" class="radio hidden" />
+          <label for="bebida">
+            <div class="food">
+              <img src="./assets/img/coquinha_gelada 1.png" />
+              <p class="food-name">Coquinha Gelada</p>
+              <p class="food-description">Lata 350ml</p>
+              <p class="food-price">R$ 4,90</p>
+
+              <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
+            </div>
+          </label>
+          <input id="bebida2" name="drink" type="radio" class="radio hidden" />
+          <label for="bebida2">
+            <div class="food">
+              <img src="./assets/img/coquinha_gelada 1.png" />
+              <p class="food-name">Fantinha Gelada</p>
+              <p class="food-description">Lata 350ml</p>
+              <p class="food-price">R$ 4,90</p>
+
+              <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
+            </div>
+          </label>
+          <input id="bebida3" name="drink" type="radio" class="radio hidden" />
+          <label for="bebida3">
+            <div class="food">
+              <img src="./assets/img/coquinha_gelada 1.png" />
+              <p class="food-name">Dollynho Gelado</p>
+              <p class="food-description">Lata 350ml</p>
+              <p class="food-price">R$ 4,90</p>
+
+              <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="box-food">
+        <h1>Por fim, sua sobremesa</h1>
+        <div class="foods">
+          <input id="pudim1" name="dessert" type="radio" class="radio hidden" />
+          <label for="pudim1">
+            <div class="food">
+              <img src="./assets/img/pudim 1.png" />
+              <p class="food-name">Pudim</p>
+              <p class="food-description">Apenas pudim</p>
+              <p class="food-price">R$ 7,90</p>
+              <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
+            </div>
+          </label>
+          <input id="pudim2" name="dessert" type="radio" class="radio hidden" />
+          <label for="pudim2">
+            <div class="food">
+              <img src="./assets/img/pudim 1.png" />
+              <p class="food-name">Pudim de Nutella</p>
+              <p class="food-description">Apenas pudim de nutella</p>
+              <p class="food-price">R$ 10,90</p>
+              <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
+            </div>
+          </label>
+          <input id="pudim3" name="dessert" type="radio" class="radio hidden" />
+          <label for="pudim3">
+            <div class="food">
+              <img src="./assets/img/pudim 1.png" />
+              <p class="food-name">Pudim de Leite Condensado</p>
+              <p class="food-description">Apenas pudim de leite condensado</p>
+              <p class="food-price">R$ 8,90</p>
+              <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="menu-bottom">
+      <button onclick="displayModaL()">
+        Selecione os 3 itens para fechar o produto
+      </button>
+    </div>
+
+    <div class="modal">
+      <div class="modal-content">
+        <div class="head">Confirme seu pedido</div>
+        <div class="products">
+          <div class="product">
+            <p id="food-selected"></p>
+            <p id="food-selected-price"></p>
+          </div>
+          <div class="product">
+            <p id="drink-selected"></p>
+            <p id="drink-selected-price"></p>
+          </div>
+          <div class="product">
+            <p id="dessert-selected"></p>
+            <p id="dessert-selected-price"></p>
+          </div>
+          <div class="product">
+            <p class="text-price">Total</p>
+            <p id="total-price"></p>
+          </div>
+        </div>
+        <button onclick="sendRequest()" class="confirm">
+          Tudo certo, pode pedir!
+        </button>
+        <button onclick="hiddenModal()" class="cancel">Cancelar</button>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </body>
+</html>
