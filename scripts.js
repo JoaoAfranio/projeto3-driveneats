@@ -122,3 +122,29 @@ function displayModaL() {
 function hiddenModal() {
   document.getElementsByClassName("modal")[0].style.display = "none";
 }
+
+var food = 0;
+var drink = 0;
+var dessert = 0;
+
+function verifySelectedItems(item) {
+  console.log(food);
+  console.log(item.name);
+  window[item.name] = 1;
+
+  console.log(food);
+
+  if (food == 1 && drink == 1 && dessert == 1) {
+    document.getElementById("button-request").style.background = "#32B72F";
+    document.getElementById("button-request").style.fontWeight = "700";
+    document.getElementById("button-request").innerHTML = "Fechar Pedido";
+
+    document.getElementById("button-request").disabled = false;
+  }
+}
+
+let inputListener = document.querySelectorAll("input").forEach((item) => {
+  item.addEventListener("click", (event) => {
+    verifySelectedItems(item);
+  });
+});
