@@ -88,7 +88,7 @@ function sendMessage(
     "\n";
   let encodeText = encodeURIComponent(text);
 
-  location.href = "https://wa.me/34996632502?text=" + encodeText;
+  location.href = "https://wa.me/5534996632502?text=" + encodeText;
 }
 
 function displayModaL() {

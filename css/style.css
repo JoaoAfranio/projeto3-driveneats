@@ -99,6 +99,8 @@ h1 {
 
 .food img {
   width: 100%;
+  border-radius: 5px;
+  height: 90px;
 }
 
 .food .food-name {
