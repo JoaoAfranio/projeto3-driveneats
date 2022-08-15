@@ -148,6 +148,11 @@ h1 {
   border: none;
 }
 
+.active {
+  background-color: #32b72f !important;
+  font-weight: 700;
+}
+
 .hidden {
   display: none;
 }
