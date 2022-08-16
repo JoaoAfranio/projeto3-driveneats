@@ -65,22 +65,6 @@ h1 {
   overflow-x: scroll;
 }
 
-.radio:checked + label .food {
-  box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.15), inset 0px 0px 0px 5px #32b72f;
-}
-
-.radio:checked + label .food .icon-check {
-  display: inherit;
-}
-
-.icon-check {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  display: none;
-  color: #32b72f;
-}
-
 .food {
   height: 216px;
   min-width: 172px;
@@ -95,6 +79,22 @@ h1 {
   gap: 5px;
 
   box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+}
+
+.icon-check {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  color: #32b72f;
+}
+
+.radio:checked + label .food {
+  box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.15), inset 0px 0px 0px 5px #32b72f;
+}
+
+.radio:checked + label .food .icon-check {
+  display: inherit;
 }
 
 .food img {

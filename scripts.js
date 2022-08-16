@@ -10,13 +10,15 @@ let dessertPrice;
 let priceTotal;
 
 function getSelectedItems() {
-  let food = document.querySelector("input[name=food]:checked");
-  let drink = document.querySelector("input[name=drink]:checked");
-  let dessert = document.querySelector("input[name=dessert]:checked");
+  const food = document.querySelector("input[name=food]:checked");
+  const drink = document.querySelector("input[name=drink]:checked");
+  const dessert = document.querySelector("input[name=dessert]:checked");
 
-  let foodLabel = document.querySelector("label[for='" + food.id + "']");
-  let drinkLabel = document.querySelector("label[for='" + drink.id + "']");
-  let dessertLabel = document.querySelector("label[for='" + dessert.id + "']");
+  const foodLabel = document.querySelector("label[for='" + food.id + "']");
+  const drinkLabel = document.querySelector("label[for='" + drink.id + "']");
+  const dessertLabel = document.querySelector(
+    "label[for='" + dessert.id + "']"
+  );
 
   foodName = foodLabel.getElementsByClassName("food-name")[0].textContent;
   foodPrice = foodLabel.getElementsByClassName("food-price")[0].textContent;
@@ -30,8 +32,8 @@ function getSelectedItems() {
 }
 
 function sendRequest() {
-  let namePerson = prompt("Digite seu nome: ");
-  let adress = prompt("Digite seu endereco: ");
+  const namePerson = prompt("Digite seu nome: ");
+  const adress = prompt("Digite seu endereco: ");
 
   sendMessage(namePerson, adress);
 }
@@ -49,7 +51,7 @@ function sumPrice() {
 }
 
 function sendMessage(namePerson, adress) {
-  let text =
+  const text =
     " Olá, gostaria de fazer o pedido: \n" +
     "- Prato: " +
     foodName +
@@ -69,7 +71,7 @@ function sendMessage(namePerson, adress) {
     "Endereco: " +
     adress +
     "\n";
-  let encodeText = encodeURIComponent(text);
+  const encodeText = encodeURIComponent(text);
 
   location.href = "https://wa.me/5534996632502?text=" + encodeText;
 }
@@ -109,8 +111,8 @@ function verifySelectedItems() {
   }
 }
 
-let inputListener = document.querySelectorAll("input").forEach((item) => {
-  item.addEventListener("click", (event) => {
+const inputListener = document.querySelectorAll("input").forEach((item) => {
+  item.addEventListener("click", () => {
     verifySelectedItems(item);
   });
 });
